@@ -1,10 +1,13 @@
 import React from 'react'
+import Todo from './Todo'
 
-const TodoList = () => {
+const TodoList = ({todos}) => {
   return (
 	<div className="todo-container">
 		<ul className="todo-list">
-			할일이 많다.
+			{todos.map(todo => (
+				<Todo text={todo.text} id={todo.id}/>
+			))}
 		</ul>
 	</div>
   )
