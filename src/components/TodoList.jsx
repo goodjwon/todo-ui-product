@@ -1,5 +1,6 @@
 import React from 'react'
 import Todo from './Todo'
+import Button from './Button'
 
 const TodoList = ({todos}) => {
   return (
@@ -9,6 +10,7 @@ const TodoList = ({todos}) => {
 				<Todo text={todo.text} key={todo.id}/>
 			))}
 		</ul>
+		<Button/>
 	</div>
   )
 }
