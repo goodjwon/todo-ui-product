@@ -1,20 +1,28 @@
 import React from 'react'
 
-const Form = ({ setInputText, todos, setTodos, inputText }) => {
+const Form = ({ setInputText, todoList, setTodoList, inputText, setStatus }) => {
   
   const inputTextHandler = (e)=>{
-	console.log(e.target.value);
 	setInputText(e.target.value);
 	
   };
 
   const submitTodoHandler = (e)=>{
+	console.log(e.target.value =="")
+
+	if(e.target.value){
+		alert("Not input");
+	}
+
 	e.preventDefault();
-	setTodos([
-		...todos, {text: inputText, completed:false, id: Math.random()*1000},
+	setTodoList([
+		...todoList, {text: inputText, id: Math.random()*1000, completed: false },
 	])
 	setInputText("");
 	
+  };
+  const statusHandler = (e) =>{
+	setStatus(e.target.value);
   }
   return (
 	<form>
@@ -25,7 +33,7 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
 			className="todo-input" />
 		<button onClick={submitTodoHandler} className="todo-button" type="submit">submit</button>
 		<div className="select">
-			<select name="todo" id="" className="filter-todo">
+			<select name="todo" id="" className="filter-todo" onChange={statusHandler}>
 				<option value="all">All</option>
 				<option value="completed">completed</option>
 				<option value="uncompleted">uncompleted</option>

@@ -2,17 +2,17 @@ import React from 'react'
 import Todo from './Todo'
 import Button from './Button'
 
-const TodoList = ({todos, setTotods, filterReadTodos}) => {
+const TodoList = ({todoList, setTodoList, filteredTodoList}) => {
   return (
 	<div className="todo-container">
 		<ul className="todo-list">
-			{todos.map(todo => (
-				<Todo 
-				setTotods={setTotods}
-				todos={todos}
-				todo={todo}
-				text={todo.text} 
-				key={todo.id}/>
+			{filteredTodoList.map(todo => (
+				<Todo
+					setTodoList={setTodoList}  
+					todoList = {todoList}
+					key={todo.id} 
+					todo={todo}
+					text={todo.text} />
 			))}
 		</ul>
 		<Button/>

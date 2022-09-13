@@ -9,29 +9,41 @@ function App() {
 
   //State stuff
   const [inputText, setInputText] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todoList, setTodoList] = useState([]);
   const [status, setStatus] = useState('all');
-  const [filteredTodoList, setfilteredTodoList] = useState([]);
+  const [filteredTodoList, setFilteredTodoList] = useState([]);
 
+  //UseEffect
   useEffect( ()=>{
     filterHandler();
-  }, [todos, status]);
+    saveLocalTodoList();
+  }, [todoList, status]);
   
 
   //functions
   const filterHandler = () => {
     switch(status){
-      case 'complated' :
-        setfilteredTodoList(todos.filter(todo=>todo.complated === true));
+      case 'completed' :
+        setFilteredTodoList(todoList.filter((todo)=>todo.completed === true));
         break;
-      case 'uncomplated' :
-        setfilteredTodoList(todos.filter(todo=>(todo.uncomplated === true)));
+      case 'uncompleted' :
+        setFilteredTodoList(todoList.filter((todo)=>todo.completed === false));
         break;
       default:
-        setfilteredTodoList(todos);
+        setFilteredTodoList(todoList);
         break;
     }
+  };
+
+  //save to local
+  const saveLocalTodoList = () =>{
+    if(localStorage.getItem('todoList') === null ){
+      localStorage.setItem('todoList', JSON.stringify([]))
+    } else {
+      localStorage.setItem('todoList', JSON.stringify(todoList))
+    }
   }
+
   return (
     <div className="App">
       <header>
@@ -39,13 +51,15 @@ function App() {
       </header>
       <Form 
         inputText={inputText} 
-        todos={todos} 
-        setTodos={setTodos} 
+        todoList={todoList} 
+        setTodoList={setTodoList} 
         setInputText={setInputText} 
         setStatus={setStatus}
-        filteredTodoList={setfilteredTodoList}
         />
-      <TodoList todos={todos}/>
+      <TodoList 
+        filteredTodoList={filteredTodoList} 
+        setTodoList={setTodoList} 
+        todoList={todoList}/>
     </div>
   );
 }

@@ -1,15 +1,26 @@
 import React from 'react'
 
-const Todo = ({text, todo, todos, setTodos}) => {
+const Todo = ({text, todo, todoList, setTodoList}) => {
 	const deleteHandler = () => {
-		setTodos(todos.filter(el => el.id !== todo.id))
+		setTodoList(todoList.filter(el => el.id !== todo.id))
 
 	};
 
+	const completeHandler = () => {
+		setTodoList(todoList.map((item)=>{
+			if(item.id === todo.id){
+				return {
+					...item, completed: !item.completed
+				}
+			}
+			return item;
+		}));
+	}
+    
   return (
 	<div className='todo'>
-		<li className="todo-item">{text}</li>
-		<button className="done">Done</button>
+		<li className={`todo-item ${todo.completed ? "completed": ""}`}>{text}</li>
+		<button onClick={completeHandler} className="done">Done</button>
 		<button onClick={deleteHandler} className="delete">Delete</button>
 	</div>
   )
