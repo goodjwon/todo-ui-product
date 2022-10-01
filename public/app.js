@@ -3,7 +3,6 @@ const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 
-document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteTodo);
 filterOption.addEventListener("click", filterTodo);
@@ -22,13 +21,24 @@ function addTodo(e) {
 	newTodo.classList.add("todo-item");
 	todoDiv.appendChild(newTodo);
 	todoInput.value = "";
+
+	  //Create Completed Button
+	  const completedButton = document.createElement("button");
+	  completedButton.innerHTML = `DONE`;
+	  completedButton.classList.add("complete-btn");
+	  todoDiv.appendChild(completedButton);
+	  //Create trash button
+	  const trashButton = document.createElement("button");
+	  trashButton.innerHTML = `DELETE`;
+	  trashButton.classList.add("trash-btn");
+	  todoDiv.appendChild(trashButton);
   
 	//attach final Todo
 	todoList.appendChild(todoDiv);
 }
 
 function deleteTodo(e) {
-	//todo 를 삭제 한다.
+
 }
 
 function filterTodo(e) {
