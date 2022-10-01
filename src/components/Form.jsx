@@ -8,12 +8,6 @@ const Form = ({ setInputText, todoList, setTodoList, inputText, setStatus }) => 
   };
 
   const submitTodoHandler = (e)=>{
-	console.log(e.target.value =="")
-
-	if(e.target.value){
-		alert("Not input");
-	}
-
 	e.preventDefault();
 	setTodoList([
 		...todoList, {text: inputText, id: Math.random()*1000, completed: false },
