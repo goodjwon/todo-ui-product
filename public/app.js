@@ -9,7 +9,7 @@ filterOption.addEventListener("click", filterTodo);
 
 function addTodo(e) {
   // todo 를 추가 한다.
-  	e.preventDefault();
+  	e.preventDefault(); 
     //Create todo div
 	const todoDiv = document.createElement("div");
 	todoDiv.classList.add("todo");
@@ -34,11 +34,12 @@ function addTodo(e) {
 	  todoDiv.appendChild(trashButton);
   
 	//attach final Todo
+	
 	todoList.appendChild(todoDiv);
 }
 
 function deleteTodo(e) {
-
+	console.log(e)
 }
 
 function filterTodo(e) {
