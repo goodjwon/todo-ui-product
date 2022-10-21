@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+	<style>
+		.input_boxs{
+			display: flex;
+			flex-direction: column;			
+		}
+
+		input{
+			margin: 10px;
+		}
+
+		button{
+			margin: 10px;
+		}
+	</style>
+  </head>
+  <body>
+    <header>
+      <h1>Wons Todo List</h1>
+    </header>
+    <form>
+		<div class="input_boxs">
+			<input type="text" class="todo-input" placeholder="1" />
+			<input type="text" class="todo-input" placeholder="2" />
+			<input type="text" class="todo-input" placeholder="3" />
+			<input type="text" class="todo-input" placeholder="4" />
+		</div>
+		<div>
+			<button class="todo-button" type="button">저장하기1</button>
+			<button class="todo-button" type="button">저장하기2</button>
+			<button class="todo-button" type="button">저장하기3</button>
+			<button class="todo-button" type="button">저장하기4</button>
+			<button class="todo-button" type="button">모두</button>
+		</div>
+	</form>
+
+	<div class="todo-result">result</div>
+      
+
+    <script src="./app4.js"></script>
+  </body>
+</html>
