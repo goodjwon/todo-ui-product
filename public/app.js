@@ -22,16 +22,17 @@ function addTodo(e) {
 	todoDiv.appendChild(newTodo);
 	todoInput.value = "";
 
-	  //Create Completed Button
-	  const completedButton = document.createElement("button");
-	  completedButton.innerHTML = `DONE`;
-	  completedButton.classList.add("complete-btn");
-	  todoDiv.appendChild(completedButton);
-	  //Create trash button
-	  const trashButton = document.createElement("button");
-	  trashButton.innerHTML = `DELETE`;
-	  trashButton.classList.add("trash-btn");
-	  todoDiv.appendChild(trashButton);
+	//Create Completed Button
+	const completedButton = document.createElement("button");
+	completedButton.innerHTML = `DONE`;
+	completedButton.classList.add("complete-btn");
+	todoDiv.appendChild(completedButton);
+	
+	//Create trash button
+	const trashButton = document.createElement("button");
+	trashButton.innerHTML = `DELETE`;
+	trashButton.classList.add("trash-btn");
+	todoDiv.appendChild(trashButton);
   
 	//attach final Todo
 	
@@ -39,7 +40,14 @@ function addTodo(e) {
 }
 
 function deleteTodo(e) {
+	e.preventDefault(); 
 	console.log(e)
+	const removingOne = e.target.parentElement;
+  	removingOne.remove();
+}
+
+function doneTode(e) {
+	const checkedOne = e.target.parentElement;
 }
 
 function filterTodo(e) {
