@@ -9,30 +9,6 @@ todoButtons[2].addEventListener("click", eventAll);
 todoButtons[3].addEventListener("click", eventAll);
 todoButtons[4].addEventListener("click", eventAll);
 
-function event1(e) {
-	e.preventDefault();
-	todoResult.innerHTML = todoInputs[0].value;
-}
-function event2(e) {
-	e.preventDefault();
-	todoResult.innerHTML = todoInputs[1].value;
-}
-function event3(e) {
-	e.preventDefault();
-	todoResult.innerHTML = todoInputs[2].value;
-}
-function event4(e) {
-	e.preventDefault();
-	todoResult.innerHTML = todoInputs[3].value;
-}
-
-function event5(e) {
-	e.preventDefault();
-	todoResult.innerHTML = "";
-	todoInputs.forEach(v => {
-		todoResult.innerHTML += v.value + " ";
-	});
-}
 
 function eventAll(event){
 	todoResult.innerHTML = "";
