@@ -9,19 +9,12 @@ todoButtons[2].addEventListener("click", eventAll);
 todoButtons[3].addEventListener("click", eventAll);
 todoButtons[4].addEventListener("click", eventAll);
 
-
 function eventAll(event){
 	todoResult.innerHTML = "";
-	console.log({
-		type: event.type,
-		id: event.target.id,
-		name: event.target.name,
-		value: event.target.value,
-	  });
 
-	  if(event.target.id !== "btn-5"){
-	  	todoResult.innerHTML = todoInputs[event.target.value].value;
-	  }else{		
+	if(event.target.id !== "btn-5"){
+		todoResult.innerHTML = todoInputs[event.target.value].value;
+	} else {		
 		todoInputs.forEach(v => {
 		todoResult.innerHTML += v.value + " ";});
 	}
