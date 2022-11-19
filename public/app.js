@@ -75,6 +75,7 @@ function filterTodo(e) {
 	// console.log(todos)
 	todos.forEach(function(todo){
 		console.log(e.target.value);
+		console.log(todo);
 		console.log(todo.style.display);
 
 		switch(e.target.value){

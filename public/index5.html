@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="content">
+		<button>버튼을 누루시오.</button>
+		<h1>글자가 바뀝니다.</h1>
+	</div>
+</body>
+<script>
+	const button = document.querySelector('button');
+	const h1 = document.querySelector('h1');
+	const body = document.querySelector('body');
+	button.addEventListener('click', function(){
+		h1.style.color = 'red';
+		body.style.backgroundColor = 'blue'
+		
+		//Change from h1 tag to h2 tag when button is pressed
+		const newH2 = document.createElement('h2');
+		newH2.textContent = 'This is a new h2 tag';
+		document.body.appendChild(newH2);
+	});
+</script>
+</html>
