@@ -73,6 +73,7 @@ function filterTodo(e) {
 	//todo를 필터링 해서 보여준다.
 	const todos = todoList.childNodes;
 	// console.log(todos)
+	let i = 0;
 	todos.forEach(function(todo){
 		console.log(e.target.value);
 		console.log(todo);
@@ -99,6 +100,7 @@ function filterTodo(e) {
 			default:
 				break;
 		}
+		i=i++;
 	});
 }
 
