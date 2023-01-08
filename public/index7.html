@@ -1,63 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=], initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<table>
-		<thead>
-			<tr>
-				<th>부품번호</th>
-				<th>부품상세내역</th>
-				<th>제조년도</th>
-				<th>단가</th>
-				<th>수량</th>
-				<th>등록일</th>
-				<th>관리</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>1</td>
-				<td>부품상세내역</td>
-				<td>2021</td>
-				<td>1000</td>
-				<td>10</td>
-				<td>2021-01-01</td>
-				<td>
-					<button>수정</button>
-					<button>삭제</button>
-				</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>부품상세내역</td>
-				<td>2021</td>
-				<td>1000</td>
-				<td>10</td>
-				<td>2021-01-01</td>
-				<td>
-					<button>수정</button>
-					<button>삭제</button>
-				</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>부품상세내역</td>
-				<td>2021</td>
-				<td>1000</td>
-				<td>10</td>
-				<td>2021-01-01</td>
-				<td>
-					<button>수정</button>
-					<button>삭제</button>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">상단영역</div>
+      <div class="container">
+        <div class="menu-left">좌측영역</div>
+        <div class="content">
+          <table>
+            <thead>
+              <tr>
+                <th>부품번호</th>
+                <th>부품상세내역</th>
+                <th>제조년도</th>
+                <th>단가</th>
+                <th>수량</th>
+                <th>등록일</th>
+                <th>관리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>부품상세내역</td>
+                <td>2021</td>
+                <td>1000</td>
+                <td>10</td>
+                <td>2021-01-01</td>
+                <td>
+                  <button>수정</button>
+                  <button>삭제</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>부품상세내역</td>
+                <td>2021</td>
+                <td>1000</td>
+                <td>10</td>
+                <td>2021-01-01</td>
+                <td>
+                  <button>수정</button>
+                  <button>삭제</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>부품상세내역</td>
+                <td>2021</td>
+                <td>1000</td>
+                <td>10</td>
+                <td>2021-01-01</td>
+                <td>
+                  <button>수정</button>
+                  <button>삭제</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><input type="text" value="부품상세내역" /></td>
+                <td><input type="text" value="2022" /></td>
+                <td><input type="text" value="100" /></td>
+                <td><input type="text" value="10" /></td>
+                <td>2021-01-01</td>
+                <td>
+                  <button>저장</button>
+                  <button>취소</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- End content -->
+        <div class="search">
+          <select>
+            <option>부품번호</option>
+            <option>제조년도</option>
+            <option>단가</option>
+            <option>수량</option>
+            <option>등록일</option>
+          </select>
+          <input type="text" placeholder="검색어를 입려갛시오" />
+          <button>검색</button>
+        </div><!-- End search -->
+        <div class="content-right">우측영역</div>
+      </div><!-- End container -->
+      <div class="footer">하단영역</div>
+    </div><!-- End wrapper -->
+  </body>
 </html>
+›
