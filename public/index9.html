@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+  <ul>
+    <li>육상 동물
+      <ul>
+        <li>포유류
+          <ul>
+            <li>소</li>
+            <li>당나귀</li>
+            <li>개</li>
+            <li>호랑이</li>
+          </ul>
+        </li>
+        <li>비 포유류
+          <ul>
+            <li>뱀</li>
+            <li>새</li>
+            <li>도마뱀</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>수생 동물
+      <ul>
+        <li>담수 동물
+          <ul>
+            <li>붕어</li>
+            <li>메기</li>
+          </ul>
+        </li>
+        <li>해양 동물
+          <ul>
+            <li>해마</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <div id="result"></div>
+
+</body>
+<script>
+	const result = document.querySelector("#result");
+	const ex1 = document.querySelectorAll("li");
+	ex1.forEach((item) => {
+		let title = item.firstChild.nodeValue.trim();
+		let count = item.getElementsByTagName("li").length;
+		let r1 = document.createElement('li');
+		r1.textContent = title +": "+count;
+		result.appendChild(r1);
+	});
+	
+	
+</script>
+</html>
+

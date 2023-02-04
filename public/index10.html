@@ -1,0 +1,13 @@
+<!doctype html>
+<body><!-- 주석 -->
+
+ <script>
+   // 주석 노드를 대상으로 두 프로퍼티 비교
+   console.log( document.body.firstChild.tagName ); // undefined (요소가 아님)
+   console.log( document.body.firstChild.nodeName ); // #comment
+
+   // 문서 노드를 대상으로 두 프로퍼티 비교
+   console.log( document.tagName ); // undefined (요소가 아님)
+   console.log( document.nodeName ); // #document
+ </script>
+</body>
