@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form name="my">
+		<input type=”text” name="one" value="1">
+		<input type="hidden" name="two" value="2">
+	 </form>
+	  
+	  <script>
+		// 폼 얻기
+		let form = document.forms.my; // <form name="my"> 요소
+	  
+		// 요소 얻기
+		let elem = form.elements.one; // <input name="one"> 요소
+                     let elem1 = form.elements.two
+	  
+		console.log(elem.value); // 1
+        console.log(elem1.value); // 2
+
+	  </script>
+
+</body>
+</html>
