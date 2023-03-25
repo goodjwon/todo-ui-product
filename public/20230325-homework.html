@@ -1,0 +1,20 @@
+<select id="select" multiple>
+	<option value="blues" selected>Blues</option>
+	<option value="rock" selected>Rock</option>
+	<option value="classic">Classic</option>
+  </select>
+  
+  <script>
+	const select = document.getElementById('select');
+  
+	function updateSelected() {
+	  // 선택한 값 전체
+	  const selected = Array.from(select.options)
+		.filter(option => option.selected)
+		.map(option => option.value);
+  
+	  console.log(selected); 
+	}
+  
+	select.addEventListener('change', updateSelected);
+  </script>

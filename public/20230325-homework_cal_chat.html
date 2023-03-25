@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calendar</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 300px;
+    }
+    th, td {
+      border: 1px solid black;
+      text-align: center;
+      padding: 10px;
+    }
+    th {
+      background-color: gray;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+    </thead>
+    <tbody id="calendar-body">
+    </tbody>
+  </table>
+
+  <script>
+    function createCalendar(calendar, year, month) {
+      const firstDayOfMonth = new Date(year, month - 1, 1);
+      const firstDayOfWeek = firstDayOfMonth.getDay();
+      const lastDayOfMonth = new Date(year, month, 0).getDate();
+
+      let date = 1;
+      for (let week = 0; week < 6; week++) {
+        const weekArray = [];
+        for (let dayOfWeek = 0; dayOfWeek < 7; dayOfWeek++) {
+          if (week === 0 && dayOfWeek < firstDayOfWeek) {
+            weekArray.push(0);
+          } else if (date > lastDayOfMonth) {
+            weekArray.push(0);
+          } else {
+            weekArray.push(date);
+            date++;
+          }
+        }
+        calendar.push(weekArray);
+      }
+      return calendar;
+    }
+
+    const calendar = [];
+    createCalendar(calendar, 2023, 3);
+    const calendarBody = document.getElementById('calendar-body');
+    for (let week of calendar) {
+      const tr = document.createElement('tr');
+      for (let day of week) {
+        const td = document.createElement('td');
+        td.textContent = day || '';
+        tr.appendChild(td);
+      }
+      calendarBody.appendChild(tr);
+    }
+  </script>
+</body>
+</html>
