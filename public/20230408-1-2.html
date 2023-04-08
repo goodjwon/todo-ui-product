@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	Data received: (3) ['Apple', 'Banana', 'Cherry']
+</body>
+<script>
+function fetchData(callback) {
+  setTimeout(function () {
+    const data = ["Apple", "Banana", "Cherry"];
+    callback(data);
+  }, 1000);
+}
+
+function processData(data) {
+  console.log("Data received:", data);
+}
+
+fetchData(processData); // 출력: Data received: [ 'Apple', 'Banana', 'Cherry' ]
+</script>
+</html>
