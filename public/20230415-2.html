@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .wrapper > div {
+                /* background-color: orange; */
+                border: 1px black solid;
+            }
+			
+            .wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 2fr 1fr;
+                grid-template-rows: 50px 100px 100px 30px;
+                grid-template-areas:
+                    "header header header header"
+                    "leftCol midTop midTop rightCol"
+                    "leftCol midBottom midBottom rightCol"
+                    "footer footer footer footer";
+                grid-gap: 5px;
+            }
+
+            .header {
+                grid-area: header;
+                background-color: LightSeaGreen;
+            }
+
+            .leftCol {
+                grid-area: leftCol;
+                background-color: orange;
+            }
+
+            .rightCol {
+                grid-area: rightCol;
+                background-color: lightblue;
+            }
+
+            .midTop {
+                grid-area: midTop;
+                background-color: lightgrey;
+            }
+
+            .midBottom {
+                grid-area: midBottom;
+                background-color: pink;
+            }
+
+            .footer {
+                grid-area: footer;
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">Header</div>
+            <div class="leftCol">LeftCol</div>
+            <div class="rightCol">RightCol</div>
+            <div class="midTop">midTop</div>
+            <div class="midBottom">midBottom</div>
+            <div class="footer">Footer</div>
+        </div>
+    </body>
+</html>
