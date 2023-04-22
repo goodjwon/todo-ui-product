@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .layout {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 1em;
+            }
+            aside {
+                flex-basis: 160px;
+                flex-grow: 0;
+                flex-shrink: 0;
+                background-color: #f0f0ff;
+            }
+            article {
+                flex-basis: 680px;
+                flex-grow: 1;
+                flex-shrink: 1;
+                background-color: #ffe0e0;
+            }
+            .flexbox {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
+                padding: 10px;
+                background-color: #f0f0f0;
+            }
+            .item {
+                min-height: 150px;
+                flex-basis: 150px;
+                flex-shrink: 1;
+                flex-grow: 1;
+				background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="layout">
+            <aside>사이드바</aside>
+            <article>
+                <h1>타이틀</h1>
+                <div class="flexbox">
+                    <div class="item">content1</div>
+                    <div class="item">content2</div>
+                    <div class="item">content3</div>
+                    <div class="item">content4</div>
+                </div>
+            </article>
+        </div>
+    </body>
+</html>
