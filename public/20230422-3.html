@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Flex Grid</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "Arial", sans-serif;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100vw;
+                height: 100vh;
+				justify-content: space-between;
+            }
+
+            .item {
+                align-items: center;
+                background-color: green;
+                color: #fff;
+				text-align: center;
+                width: calc(90vw / 3);
+                height: calc(90vh / 3);
+                border: 1px solid #fff;
+                font-size: 1rem;
+				margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item" id="one">Image One</div>
+            <div class="item" id="two">Image Two</div>
+            <div class="item" id="three">Image Three</div>
+            <div class="item" id="four">Image Four</div>
+            <div class="item" id="five">Image Five</div>
+            <div class="item" id="six">Image Six</div>
+            <div class="item" id="seven">Image Seven</div>
+            <div class="item" id="eight">Image Eight</div>
+            <div class="item" id="nine">Image Nine</div>
+        </div>
+    </body>
+</html>

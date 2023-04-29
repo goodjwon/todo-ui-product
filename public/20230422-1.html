@@ -16,28 +16,51 @@
                 /* flex-wrap: nowrap; */
                 flex-wrap: wrap;
                 /* flex-wrap: wrap-reverse; */
+
+                /* justify-content: flex-start; */
+                /* justify-content: flex-end; */
+                /* justify-content: center; */
+                /* justify-content: space-between; */
+                /* justify-content: space-around; */
+                justify-content: space-evenly;
+
+                align-items: stretch;
+                /* align-items: flex-start; */
+                /* align-items: flex-end; */
+                /* align-items: center; */
+                /* align-items: baseline; */
             }
             .item {
+                /* flex-basis: auto; 기본값 */
+                /* flex-basis: 0; */
+                /* flex-basis: 50%; */
+                flex-basis: 100px;
+                /* flex-basis: 10rem; */
+                /* flex-basis: content; */
+
                 background-color: green;
                 margin: 5px;
+                color: white;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="item">helloflex</div>
+            <div class="item">1 helloflex</div>
             <div class="item">abc</div>
             <div class="item">helloflex</div>
-			<div class="item">helloflex</div>
-			<div class="item">helloflex</div>
-			<div class="item">helloflex</div>
-			<div class="item">helloflex</div>
-			<div class="item">helloflex</div>
-			<div class="item">helloflex</div>
-			<div class="item">helloflex</div>
-			<div class="item">helloflex</div>
-			<div class="item">helloflex</div>
-			<div class="item">helloflex</div>
+            <div class="item">helloflex</div>
+            <div class="item">helloflex</div>
+            <div class="item">helloflex</div>
+            <div class="item">
+                helloflexhelloflexhelloflexhelloflexhelloflex
+            </div>
+            <div class="item">helloflex</div>
+            <div class="item">helloflex</div>
+            <div class="item">helloflex</div>
+            <div class="item">helloflex</div>
+            <div class="item">helloflex</div>
+            <div class="item">12 helloflex</div>
         </div>
     </body>
 </html>
